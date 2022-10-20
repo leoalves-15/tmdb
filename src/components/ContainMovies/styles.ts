@@ -1,9 +1,17 @@
 import styled from "styled-components";
 
+export const Contain = styled.section`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+`;
+
 export const Container = styled.article`
   display: flex;
   flex-wrap: wrap;
-  max-width: 100%;
+  width: 100%;
   cursor: pointer;
-  justify-content: space-evenly;
+  max-width: 1100px;
+  justify-content: flex-start;
 `;

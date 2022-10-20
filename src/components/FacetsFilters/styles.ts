@@ -4,6 +4,9 @@ export const Container = styled.div`
   display: flex;
   flex-wrap: wrap;
   width: 100%;
+  @media (min-width: 800px) {
+    justify-content: center;
+  }
 `;
 
 export const LabelCta = styled.p`
@@ -14,6 +17,10 @@ export const LabelCta = styled.p`
   line-height: 20px;
   margin: 0 0 8px 0;
   color: #ffffff;
+  @media (min-width: 800px) {
+    text-align: center;
+    margin: 0 0 16px 0;
+  }
 `;
 
 export const FacetsCard = styled.div`

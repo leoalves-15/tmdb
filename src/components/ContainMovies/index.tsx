@@ -1,6 +1,6 @@
 import React from "react";
-import { Container } from "./styles";
-import MovieCard from "../MovieCard"
+import { Container, Contain } from "./styles";
+import MovieCard from "../MovieCard";
 
 const movies = [
   {
@@ -347,11 +347,13 @@ const movies = [
 
 const ContainMovies = () => {
   return (
-    <Container>
-      {movies.map((movie) => {
-        return <MovieCard key={movie.id} {...movie}></MovieCard>;
-      })}
-    </Container>
+    <Contain>
+      <Container>
+        {movies.map((movie) => {
+          return <MovieCard key={movie.id} {...movie}></MovieCard>;
+        })}
+      </Container>
+    </Contain>
   );
 };
 
