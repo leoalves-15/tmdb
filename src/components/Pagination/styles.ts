@@ -2,15 +2,19 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   display: flex;
-  width: 156px;
-  height: 280px;
+  width: 100vw;
   cursor: pointer;
-  margin: 0 0 32px 0;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const ChangePage = styled.img`
+  margin-left: 16px;
 `;
 
 export const PaginationItem = styled.p`
   font-family: "Roboto";
-  margin-left: 5px;
+  margin-left: 16px;
   font-style: normal;
   font-weight: 700;
   font-size: 16px;

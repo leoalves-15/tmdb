@@ -1,5 +1,6 @@
 import React from "react";
-import { Container, PaginationItem } from "./styles";
+import { Container, PaginationItem, ChangePage } from "./styles";
+import Next from "../../images/Path.svg";
 
 const Pagination = () => {
   let PageQtd = 1;
@@ -14,6 +15,7 @@ const Pagination = () => {
       )}
       <PaginationItem>{PageQtd}</PaginationItem>
       {PageQtd !== PageTotal && <PaginationItem>{PageQtd + 1}</PaginationItem>}
+      <ChangePage src={Next} />{" "}
       {PageQtd !== PageTotal && <PaginationItem>Última</PaginationItem>}
     </Container>
   );

@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Container = styled.div`
   display: flex;
   flex-wrap: wrap;
-  width: 100vw;
+  width: 100%;
 `;
 
 export const LabelCta = styled.p`
