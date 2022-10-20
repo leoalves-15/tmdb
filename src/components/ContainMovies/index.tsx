@@ -349,7 +349,7 @@ const ContainMovies = () => {
   return (
     <Container>
       {movies.map((movie) => {
-        return <MovieCard {...movie}></MovieCard>;
+        return <MovieCard key={movie.id} {...movie}></MovieCard>;
       })}
     </Container>
   );
