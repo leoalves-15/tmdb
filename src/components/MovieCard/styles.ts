@@ -1,25 +1,28 @@
 import styled from "styled-components";
+import { SubTitle, Description } from "../../styles/generic.styles";
 
 export const Container = styled.article`
-  max-width: 100%;
-  height: 100%;
-  max-height: 270px;
+  width: 156px;
+  height: 280px;
   cursor: pointer;
+  margin: 0 0 32px 0;
 `;
 
 export const MovieImage = styled.img`
-  height: 100%;
-  max-height: 232px;
-  width: 100%;
-  max-width: 154.67px;
+  object-fit: cover;
+  width: 156px;
+  height: 232px;
   border-radius: 4px;
 `;
 
-export const ContainInfos = styled.div`
+export const MovieTitle = styled(SubTitle)`
+  max-height: 40px;
+  white-space: wrap;
+  text-overflow: ellipsis; 
+  max-width: 232px;
+  overflow: hidden;
 `;
 
-export const MovieTitle = styled.h2`
-`;
-
-export const MovieDate = styled.p`
+export const MovieDate = styled(Description)`
+  height: 20px;
 `;
