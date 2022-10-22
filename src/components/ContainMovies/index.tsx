@@ -1,17 +1,13 @@
 import React, { useContext } from "react";
-import { Container, Contain } from "./styles";
-import MovieCard from "../MovieCard";
+import { Contain } from "./styles";
 import { ContextHome } from "../../contexts/Home/ContextHome";
+import GridMovies from "../GridMovies";
 
 const ContainMovies = () => {
   const { Movies } = useContext(ContextHome);
   return (
     <Contain>
-      <Container>
-        {Movies?.map((movie) => {
-          return <MovieCard key={movie.id} {...movie}></MovieCard>;
-        })}
-      </Container>
+      <GridMovies Movies={Movies} />
     </Contain>
   );
 };

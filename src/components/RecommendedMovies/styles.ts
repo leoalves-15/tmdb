@@ -6,5 +6,3 @@ export const Contain = styled.section`
   justify-content: center;
   width: 100vw;
 `;
-
-export const Title = styled.h3``;

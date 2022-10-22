@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import {
   Container,
   Banner,
@@ -8,14 +8,17 @@ import {
   Label,
   ContainerBanner,
 } from "./styles";
+import { ContextDetails } from "../../contexts/ContextDetails/ContextDetails";
 
 const MainBannerMovie = () => {
+  const { Movie } = useContext(ContextDetails);
+
   return (
     <Container>
       <ContainerBanner>
         <Banner />
       </ContainerBanner>
-      <Title></Title>
+      <Title>{Movie?.title}</Title>
       <ContainerDetails>
         <Details></Details>
         <Details></Details>
@@ -23,7 +26,8 @@ const MainBannerMovie = () => {
         <Details></Details>
       </ContainerDetails>
       {/* grafico */}
-      <Label></Label>
+      <Label>Sinopse</Label>
+      <Details>{Movie?.overview}</Details>
     </Container>
   );
 };

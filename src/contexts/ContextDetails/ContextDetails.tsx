@@ -11,13 +11,10 @@ export const ContextDetails = createContext<ContextDetailsTypes>(
 const DetailsProvider = (props: { children: ReactNode }) => {
   const [Movie, setMovie] = useState<Movie>();
   const { currentMovie } = useCurrentMovie();
-  console.log("currentMovie", currentMovie);
 
   useEffect(() => {
     setMovie(currentMovie);
   }, [currentMovie]);
-
-  console.log("Movie", Movie);
 
   return (
     <ContextDetails.Provider value={{ Movie }}>
