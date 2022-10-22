@@ -11,6 +11,19 @@ export const SubTitle = styled.h2`
   margin: 10px 0 0 0;
 `;
 
+export const Title = styled.h2`
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 32px;
+  display: flex;
+  align-items: center;
+  margin-bottom:0;
+  padding-left: 20px;
+  color: #131313;
+`;
+
 export const Description = styled.p`
   font-family: "Roboto";
   font-style: normal;

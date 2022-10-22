@@ -11,6 +11,11 @@ export const Container = styled.article`
   background: #ffffff;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 4px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  &:first-child {
+    margin-left: 0px;
+  }
 `;
 
 export const ActorImage = styled.img`
