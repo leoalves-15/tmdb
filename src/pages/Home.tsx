@@ -7,9 +7,9 @@ import HomeProvider from "../contexts/Home/ContextHome";
 function Home() {
   return (
     <HomeProvider>
-      <MainCta />
-      <ContainMovies />
-      <Pagination />
+        <MainCta />
+        <ContainMovies />
+        <Pagination />
     </HomeProvider>
   );
 }

@@ -13,8 +13,10 @@ export const Container = styled.article`
   width: 100%;
   cursor: pointer;
   max-width: 1100px;
-  justify-content: flex-start;
+  justify-content: center;
+  @media (min-width: 800px) {
+    justify-content: flex-start;
+  }
 `;
 
-export const Title = styled.h3`
-`;
+export const Title = styled.h3``;

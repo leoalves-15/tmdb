@@ -1,5 +1,5 @@
 export type GenderId = number;
-  
+
 export type Movie = {
   adult: boolean;
   backdrop_path: string;
@@ -14,4 +14,11 @@ export type Movie = {
   video: boolean;
   vote_average: number;
   vote_count: number;
+};
+
+export type ResponseMovie = {
+  page: number;
+  results: Movie[];
+  total_pages: number;
+  total_results: number;
 };

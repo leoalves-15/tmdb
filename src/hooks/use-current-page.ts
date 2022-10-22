@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
-import { Movie } from "../models/generics.types";
+import { ResponseMovie } from "../models/generics.types";
 import { getPopularMovies } from "../services/getPopularMovies";
 import { useUrl } from "./use-url";
 
 export function useCurrentMovies() {
-  const [listCurrentPage, setlistCurrentPage] = useState<Movie>();
+  const [listCurrentPage, setlistCurrentPage] = useState<ResponseMovie>();
   const { url } = useUrl();
   const page = url.split("page=")[1] || '1';
 

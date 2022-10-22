@@ -6,6 +6,11 @@ export const Container = styled.article`
   height: 280px;
   cursor: pointer;
   margin: 0 16px 32px 0;
+  @media (max-width: 800px) {
+    &:nth-child(2n + 0) {
+      margin: 0 0px 48px 0;
+    }
+  }
   @media (min-width: 800px) {
     margin: 0 32px 48px 0;
     &:nth-child(6n + 0) {
