@@ -9,14 +9,6 @@ export const Container = styled.article`
   }
 `;
 
-export const ContainerBanner = styled.article`
-  display: flex;
-  height: 355px;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-`;
-
 export const Banner = styled.img`
   width: 186px;
   height: 279px;
@@ -26,14 +18,5 @@ export const Banner = styled.img`
   border-radius: 8px;
 `;
 
-export const Title = styled.h1`
-`;
-
-export const ContainerDetails = styled.div`
-`;
-
-export const Details = styled.p`
-`;
-
-export const Label = styled.p`
+export const Title = styled.h3`
 `;

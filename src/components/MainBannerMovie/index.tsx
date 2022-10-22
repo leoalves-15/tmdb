@@ -1,10 +1,20 @@
 import React from "react";
-import { Container, Banner, Title, ContainerDetails, Details, Label } from "./styles";
+import {
+  Container,
+  Banner,
+  Title,
+  ContainerDetails,
+  Details,
+  Label,
+  ContainerBanner,
+} from "./styles";
 
 const MainBannerMovie = () => {
   return (
     <Container>
-      <Banner />
+      <ContainerBanner>
+        <Banner />
+      </ContainerBanner>
       <Title></Title>
       <ContainerDetails>
         <Details></Details>

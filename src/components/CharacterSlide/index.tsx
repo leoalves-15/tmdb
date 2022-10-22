@@ -6,7 +6,7 @@ import {
   ContainerCharacters,
 } from "./styles";
 import CharacterCard from "../CharacterCard";
-const Characters = [{}];
+const Characters = [{ Actor: "string", Character: "string" }];
 const CharacterSlide = () => {
   return (
     <Container>

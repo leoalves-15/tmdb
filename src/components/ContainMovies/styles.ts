@@ -15,3 +15,6 @@ export const Container = styled.article`
   max-width: 1100px;
   justify-content: flex-start;
 `;
+
+export const Title = styled.h3`
+`;
