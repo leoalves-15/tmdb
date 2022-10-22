@@ -1,8 +1,8 @@
 import axios from "axios";
 import { config } from "./configAxios";
 
-export const getPopularMovies = async (page: string) => {
-  const configAxios = config("get", "movie/popular", page);
+export const getMovie = async (id: string) => {
+  const configAxios = config("get", `movie/${id}`);
 
   try {
     const response = await axios(configAxios);
