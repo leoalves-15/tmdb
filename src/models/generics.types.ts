@@ -1,6 +1,6 @@
 export type GenderId = number;
 
-export type Gender = { id?: number; name?: string };
+export type Gender = { id: number; name?: string };
 
 export type Movie = {
   adult: boolean;

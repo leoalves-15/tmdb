@@ -43,3 +43,12 @@ export const FacetsCard = styled.div`
   text-align: center;
   color: #323232;
 `;
+
+export const FacetsCardActive = styled(FacetsCard)`
+  background: #d18000;
+  color: #ffffff;
+`;
+
+export const CloseImage = styled.img`
+  margin-left: 5px;
+`;

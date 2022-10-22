@@ -3,7 +3,7 @@ import { Container, PaginationItem, PaginationItemActive } from "./styles";
 import { ContextHome } from "../../contexts/Home/ContextHome";
 
 const Pagination = () => {
-  const { setPage, page, allPages } = useContext(ContextHome);
+  const { setPage, page } = useContext(ContextHome);
 
   const pagenavigation = (page: number) => {
     setPage(page);
@@ -38,7 +38,7 @@ const Pagination = () => {
       >
         {page}
       </PaginationItemActive>
-      {page !== allPages && (
+      {page !== 500 && (
         <PaginationItem
           role="button"
           onClick={() => {
@@ -51,7 +51,7 @@ const Pagination = () => {
       <PaginationItem
         role="button"
         onClick={() => {
-          pagenavigation(allPages);
+          pagenavigation(500);
         }}
       >
         Última
