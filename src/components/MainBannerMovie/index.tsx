@@ -8,12 +8,15 @@ import {
   Label,
   Description,
   ContainerBanner,
+  CreditName,
+  ContainCredits,
+  ContainerCredits,
 } from "./styles";
 import { ContextDetails } from "../../contexts/ContextDetails/ContextDetails";
 import { Convert } from "../../utils/MinToH";
 
 const MainBannerMovie = () => {
-  const { currentMovie } = useContext(ContextDetails);
+  const { currentMovie, currentCredits } = useContext(ContextDetails);
 
   return (
     <Container>
@@ -27,7 +30,7 @@ const MainBannerMovie = () => {
           }}
         />
       </ContainerBanner>
-      <Title>{currentMovie?.title}</Title>
+      <Title>{currentMovie?.title} ({currentMovie?.release_date.split('-')[0]})</Title>
       <ContainerDetails>
         <Description>{currentMovie?.adult && "Adult"}</Description>
         <Description>{currentMovie?.release_date}</Description>
@@ -46,7 +49,16 @@ const MainBannerMovie = () => {
       {/* grafico */}
       <Label>Sinopse</Label>
       <Details>{currentMovie?.overview}</Details>
-      {/* grafico */}
+      <ContainerCredits>
+        {currentCredits?.crew?.splice(0, 4).map((credit) => {
+          return (
+            <ContainCredits>
+              <CreditName>{credit.name}</CreditName>
+              <Details>{credit.job}</Details>
+            </ContainCredits>
+          );
+        })}
+      </ContainerCredits>
     </Container>
   );
 };

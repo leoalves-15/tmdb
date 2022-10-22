@@ -73,3 +73,24 @@ export const Label = styled.p`
   align-items: center;
   color: #ffffff;
 `;
+
+export const CreditName = styled.p`
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  margin: 0;
+`;
+
+export const ContainerCredits = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin-top: 40px;
+`;
+
+export const ContainCredits = styled.div``;

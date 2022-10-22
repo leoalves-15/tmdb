@@ -9,7 +9,7 @@ export const ContextDetails = createContext<ContextDetailsTypes>(
 
 const DetailsProvider = (props: { children: ReactNode }) => {
   const { currentMovie, currentCredits, recommended } = useCurrentMovie();
-
+console.log(currentCredits)
   return (
     <ContextDetails.Provider value={{ currentMovie, currentCredits, recommended }}>
       {props.children}
