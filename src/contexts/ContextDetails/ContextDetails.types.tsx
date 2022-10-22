@@ -1,5 +1,6 @@
-import { Movie } from "../../models/generics.types";
+import { Movie, Credits } from "../../models/generics.types";
 
 export type ContextDetailsTypes = {
-  Movie?: Movie;
+  currentMovie?: Movie;
+  currentCredits?: Credits;
 };

@@ -11,14 +11,14 @@ import {
 import { ContextDetails } from "../../contexts/ContextDetails/ContextDetails";
 
 const MainBannerMovie = () => {
-  const { Movie } = useContext(ContextDetails);
+  const { currentMovie } = useContext(ContextDetails);
 
   return (
     <Container>
       <ContainerBanner>
         <Banner />
       </ContainerBanner>
-      <Title>{Movie?.title}</Title>
+      <Title>{currentMovie?.title}</Title>
       <ContainerDetails>
         <Details></Details>
         <Details></Details>
@@ -27,7 +27,7 @@ const MainBannerMovie = () => {
       </ContainerDetails>
       {/* grafico */}
       <Label>Sinopse</Label>
-      <Details>{Movie?.overview}</Details>
+      <Details>{currentMovie?.overview}</Details>
     </Container>
   );
 };

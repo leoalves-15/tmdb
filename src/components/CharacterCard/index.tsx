@@ -1,14 +1,14 @@
 import React, { FC } from "react";
 import { Container, ActorImage, ActorName, CharacterName } from "./styles";
-import { Character } from "./CharacterCard.types";
+import { Person } from "../../models/generics.types";
 
-const CharacterCard: FC<Character> = (props) => {
-  const { Actor, Character } = props;
+const CharacterCard: FC<Person> = (props) => {
+  const { name, character } = props;
   return (
     <Container>
-      <ActorImage/>
-      <ActorName>{Actor}</ActorName>
-      <CharacterName>{Character}</CharacterName>
+      <ActorImage />
+      <ActorName>{name}</ActorName>
+      <CharacterName>{character}</CharacterName>
     </Container>
   );
 };

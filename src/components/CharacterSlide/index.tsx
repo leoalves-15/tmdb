@@ -1,15 +1,16 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Container } from "./styles";
 import CharacterCard from "../CharacterCard";
-
-const Characters = [{ Actor: "string", Character: "string" }];
+import { ContextDetails } from "../../contexts/ContextDetails/ContextDetails";
 
 const CharacterSlide = () => {
+  const { currentCredits } = useContext(ContextDetails);
+
   return (
     <Container>
-      {Characters?.map((Character) => {
+      {currentCredits?.cast?.map((Character) => {
         return (
-          <CharacterCard key={Character.Actor} {...Character}></CharacterCard>
+          <CharacterCard key={Character.id} {...Character}></CharacterCard>
         );
       })}
     </Container>
