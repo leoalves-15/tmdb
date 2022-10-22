@@ -1,22 +1,61 @@
-import React from "react";
-import { Container, PaginationItem, ChangePage } from "./styles";
-import Next from "../../images/Path.svg";
+import React, { useContext } from "react";
+import { Container, PaginationItem, PaginationItemActive } from "./styles";
+import { ContextHome } from "../../contexts/Home/ContextHome";
 
 const Pagination = () => {
-  let PageQtd = 1;
-  let PageTotal = 50;
+  const { setPage, page, allPages } = useContext(ContextHome);
+
+  const pagenavigation = (page: number) => {
+    setPage(page);
+    window.scrollTo(0, 0);
+  };
+
   return (
     <Container>
-      {PageQtd > 1 && (
-        <>
-          <PaginationItem>Primeira</PaginationItem>
-          <PaginationItem>{PageQtd - 1}</PaginationItem>
-        </>
+      <PaginationItem
+        role="button"
+        onClick={() => {
+          pagenavigation(1);
+        }}
+      >
+        Primeira
+      </PaginationItem>
+      {page !== 1 && (
+        <PaginationItem
+          role="button"
+          onClick={() => {
+            pagenavigation(page - 1);
+          }}
+        >
+          {page - 1}
+        </PaginationItem>
       )}
-      <PaginationItem>{PageQtd}</PaginationItem>
-      {PageQtd !== PageTotal && <PaginationItem>{PageQtd + 1}</PaginationItem>}
-      <ChangePage src={Next} />{" "}
-      {PageQtd !== PageTotal && <PaginationItem>Última</PaginationItem>}
+      <PaginationItemActive
+        role="button"
+        onClick={() => {
+          pagenavigation(page);
+        }}
+      >
+        {page}
+      </PaginationItemActive>
+      {page !== allPages && (
+        <PaginationItem
+          role="button"
+          onClick={() => {
+            pagenavigation(page + 1);
+          }}
+        >
+          {page + 1}
+        </PaginationItem>
+      )}
+      <PaginationItem
+        role="button"
+        onClick={() => {
+          pagenavigation(allPages);
+        }}
+      >
+        Última
+      </PaginationItem>
     </Container>
   );
 };

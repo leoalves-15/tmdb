@@ -22,3 +22,7 @@ export const PaginationItem = styled.p`
   text-align: center;
   color: #5c16c5;
 `;
+
+export const PaginationItemActive = styled(PaginationItem)`
+  color: #0094db;
+`;

@@ -10,17 +10,19 @@ export const ContextHome = createContext<ContextHomeTypes>(
 
 const HomeProvider = (props: { children: ReactNode }) => {
   const [Movies, setMovie] = useState<Movie[]>();
-  
-  const { listCurrentPage } = useCurrentMovies();
+  const [page, setPage] = useState(1);
+  const [allPages, setAllPages] = useState(0);
+  const { listCurrentPage } = useCurrentMovies(`${page}`);
 
   useEffect(() => {
-    return () => {
-      setMovie(listCurrentPage?.results);
-    };
+    setMovie(listCurrentPage?.results);
+    setAllPages(
+      listCurrentPage?.total_pages ? listCurrentPage?.total_pages : 0
+    );
   }, [listCurrentPage]);
 
   return (
-    <ContextHome.Provider value={{ Movies }}>
+    <ContextHome.Provider value={{ Movies, setPage, page, allPages }}>
       {props.children}
     </ContextHome.Provider>
   );
