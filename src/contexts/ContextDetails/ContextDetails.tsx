@@ -8,10 +8,10 @@ export const ContextDetails = createContext<ContextDetailsTypes>(
 );
 
 const DetailsProvider = (props: { children: ReactNode }) => {
-  const { currentMovie, currentCredits } = useCurrentMovie();
+  const { currentMovie, currentCredits, recommended } = useCurrentMovie();
 
   return (
-    <ContextDetails.Provider value={{ currentMovie, currentCredits }}>
+    <ContextDetails.Provider value={{ currentMovie, currentCredits, recommended }}>
       {props.children}
     </ContextDetails.Provider>
   );
