@@ -10,7 +10,7 @@ const MovieCard: FC<Movie> = (props) => {
   return (
     <Container role="button" onClick={() => navigate(`/Movie?id=${id}`)}>
       <MovieImage
-        src={poster_path}
+        src={`https://image.tmdb.org/t/p/w300${poster_path}`}
         onError={({ currentTarget }) => {
           currentTarget.onerror = null;
           currentTarget.src =

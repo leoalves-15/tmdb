@@ -22,6 +22,7 @@ export const ActorImage = styled.img`
   width: 175px;
   height: 222px;
   border-radius: 4px;
+  object-fit: cover;
 `;
 
 export const ActorName = styled.p`
@@ -33,6 +34,7 @@ export const ActorName = styled.p`
   display: flex;
   align-items: center;
   color: #131313;
+  margin: 0;
 `;
 
 export const CharacterName = styled.p`
@@ -46,4 +48,5 @@ export const CharacterName = styled.p`
   display: flex;
   align-items: center;
   color: #131313;
+  margin: 0;
 `;

@@ -2,8 +2,8 @@ import styled from "styled-components";
 
 export const Container = styled.article`
   background: #861040;
-  padding: 0 0 18px 0;
-  height: 1660px;
+  padding: 0 0 30px 0;
+  margin-bottom: 30px;
   padding: 20px;
   @media (min-width: 800px) {
   }
@@ -38,6 +38,18 @@ export const Title = styled.h1`
 `;
 
 export const ContainerDetails = styled.div``;
+
+export const Description = styled.p`
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  margin: 0;
+`;
 
 export const Details = styled.p`
   font-family: "Roboto";

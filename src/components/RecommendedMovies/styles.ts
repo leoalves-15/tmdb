@@ -5,4 +5,5 @@ export const Contain = styled.section`
   align-items: center;
   justify-content: center;
   width: 100vw;
+  margin-top: 16px;
 `;

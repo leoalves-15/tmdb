@@ -9,7 +9,7 @@ const CharacterSlide = () => {
 
   return (
     <>
-      <Title>Recomendações</Title>
+      <Title>Elenco original</Title>
       <Container>
         {currentCredits?.cast?.map((Character) => {
           return (
