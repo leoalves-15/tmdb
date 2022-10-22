@@ -1,20 +1,23 @@
 import React from "react";
-import logo from "./logo.svg";
-import "./App.css";
-import Pagination from "./components/Pagination";
-import ContainMovies from "./components/ContainMovies";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import {GlobalStyle} from "./styles/generic.styles"
+import Movie from "./pages/Movie";
 import Header from "./components/Header";
-import MainCta from "./components/MainCta";
+
 
 function App() {
   return (
-    <>
-      {" "}
+    <BrowserRouter>
+      <>
       <Header/>
-      <MainCta/>
-      <ContainMovies />
-      <Pagination />
-    </>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/Movie" element={<Movie />} />
+        </Routes>
+        <GlobalStyle />
+      </>
+    </BrowserRouter>
   );
 }
 

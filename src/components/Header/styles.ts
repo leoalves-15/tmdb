@@ -6,7 +6,11 @@ export const Container = styled.div`
   align-items: center;
   width: 100vw;
   height: 56px;
-  background-color: #E73980;
+  background-color: #e73980;
+  @media (min-width: 800px) {
+    justify-content: flex-start;
+    padding: 0 130px;
+  }
 `;
 
 export const Logo = styled.img`

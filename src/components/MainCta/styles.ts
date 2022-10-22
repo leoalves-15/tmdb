@@ -6,8 +6,8 @@ export const Container = styled.div`
   padding: 0 0 18px 0;
   margin-bottom: 32px;
   @media (min-width: 800px) {
-   display: flex;
-   justify-content: center;
+    display: flex;
+    justify-content: center;
   }
 `;
 
@@ -30,5 +30,6 @@ export const TitleCta = styled.h1`
     line-height: 56px;
     width: 781px;
     text-align: center;
+    padding: 85px 0 40px 0;
   }
 `;
