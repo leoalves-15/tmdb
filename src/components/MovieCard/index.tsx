@@ -1,11 +1,14 @@
 import React, { FC } from "react";
 import { Container, MovieImage, MovieTitle, MovieDate } from "./styles";
 import { Movie } from "../../models/generics.types";
+import { useNavigate } from "react-router-dom";
 
 const MovieCard: FC<Movie> = (props) => {
-  const { poster_path, title, release_date } = props;
+  const { poster_path, title, release_date, id } = props;
+  const navigate = useNavigate();
+
   return (
-    <Container>
+    <Container role="button" onClick={() => navigate(`/Movie?id=${id}`)}>
       <MovieImage
         src={poster_path}
         onError={({ currentTarget }) => {
