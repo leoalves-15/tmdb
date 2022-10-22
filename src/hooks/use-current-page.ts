@@ -3,20 +3,19 @@ import { Movie } from "../models/generics.types";
 import { getPopularMovies } from "../services/getPopularMovies";
 import { useUrl } from "./use-url";
 
-export function useCurrentTask() {
-  const [currentTask, setCurrentTask] = useState<Movie>();
+export function useCurrentMovies() {
+  const [listCurrentPage, setlistCurrentPage] = useState<Movie>();
   const { url } = useUrl();
-  const id = url.split("id=")[1];
+  const page = url.split("page=")[1] || '1';
 
   useEffect(() => {
     const load = async () => {
-      setCurrentTask(await getPopularMovies(id));
+      setlistCurrentPage(await getPopularMovies(page));
     };
-    if(id) load();
-    else window.alert(`404 - Page not found`);
-  }, [id]);
+    if(page) load();
+  }, [page]);
 
   return {
-    currentTask,
+    listCurrentPage,
   };
 }
