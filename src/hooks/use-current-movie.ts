@@ -13,7 +13,6 @@ export function useCurrentMovie() {
       setCurrentMovie(await getMovie(id));
     };
     if(id) load();
-    else window.alert(`404 - Page not found`);
   }, [id]);
 
   return {

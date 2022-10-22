@@ -1,13 +1,12 @@
 import React from "react";
-import Pagination from "../components/Pagination";
 import MainBannerMovie from "../components/MainBannerMovie";
+import DetailsProvider from "../contexts/ContextDetails/ContextDetails";
 
 function Movie() {
   return (
-    <>
+    <DetailsProvider>
       <MainBannerMovie/>
-      <Pagination />
-    </>
+    </DetailsProvider>
   );
 }
 

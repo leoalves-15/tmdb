@@ -10,12 +10,15 @@ export const ContextHome = createContext<ContextHomeTypes>(
 
 const HomeProvider = (props: { children: ReactNode }) => {
   const [Movies, setMovie] = useState<Movie[]>();
+  
   const { listCurrentPage } = useCurrentMovies();
+
   useEffect(() => {
     return () => {
       setMovie(listCurrentPage?.results);
     };
   }, [listCurrentPage]);
+
   return (
     <ContextHome.Provider value={{ Movies }}>
       {props.children}
