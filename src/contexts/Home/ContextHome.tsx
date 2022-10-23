@@ -16,7 +16,6 @@ const HomeProvider = (props: { children: ReactNode }) => {
   
   useEffect(() => {
     const Genre = localStorage.getItem("Genre");
-    console.log(Genre)
     if (selectedFilters.length < 2 && Genre) {
       setSelectedFilters(JSON.parse(Genre));
     }

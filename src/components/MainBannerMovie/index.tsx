@@ -52,7 +52,7 @@ const MainBannerMovie = () => {
       <ContainerCredits>
         {currentCredits?.crew?.splice(0, 4).map((credit) => {
           return (
-            <ContainCredits>
+            <ContainCredits key={credit.id}>
               <CreditName>{credit.name}</CreditName>
               <Details>{credit.job}</Details>
             </ContainCredits>
