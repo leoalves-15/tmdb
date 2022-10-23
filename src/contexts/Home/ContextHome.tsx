@@ -13,9 +13,21 @@ const HomeProvider = (props: { children: ReactNode }) => {
   const [selectedFilters, setSelectedFilters] = useState<selectedFilter[]>([
     { id: -1 },
   ]);
+  
+  useEffect(() => {
+    const Genre = localStorage.getItem("Genre");
+    console.log(Genre)
+    if (selectedFilters.length < 2 && Genre) {
+      setSelectedFilters(JSON.parse(Genre));
+    }
+  }, []);
+
   const [page, setPage] = useState(1);
   const [allPages, setAllPages] = useState(0);
-  const { listCurrentPage, genres, filttered } = useCurrentPage(`${page}`, selectedFilters);
+  const { listCurrentPage, genres, filttered } = useCurrentPage(
+    `${page}`,
+    selectedFilters
+  );
 
   useEffect(() => {
     setMovie(listCurrentPage?.results);

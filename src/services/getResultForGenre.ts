@@ -8,6 +8,7 @@ export const getResultForGenre = async (ids?: selectedFilter[]) => {
   });
   idFormatted?.shift();
   const idFormattedString = idFormatted?.join(",");
+  localStorage.setItem('Genre', JSON.stringify(ids));
   const configAxios = config("get", `discover/movie`, `with_genres=${idFormattedString}`);
 
   try {

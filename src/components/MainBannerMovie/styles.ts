@@ -46,6 +46,7 @@ export const Description = styled.p`
   font-size: 18px;
   line-height: 24px;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   color: #ffffff;
   margin: 0;
