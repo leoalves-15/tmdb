@@ -1,9 +1,9 @@
-export const config = (method: string, endpoint: string, page?: string) => {
+export const config = (method: string, endpoint: string, addParms?: string) => {
   return {
     method: method,
     url: `${process.env.REACT_APP_BASE_URL_API}${endpoint}?api_key=${
       process.env.REACT_APP_SECRET_API
-    }&language=en-US&${page && `page=${page}`}`,
+    }&language=en-US&${addParms && `${addParms}`}`,
     headers: {},
   };
 };

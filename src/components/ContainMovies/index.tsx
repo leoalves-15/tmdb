@@ -4,10 +4,12 @@ import { ContextHome } from "../../contexts/Home/ContextHome";
 import GridMovies from "../GridMovies";
 
 const ContainMovies = () => {
-  const { Movies } = useContext(ContextHome);
+  const { Movies} = useContext(ContextHome);
   return (
     <Contain>
-      <GridMovies Movies={Movies} />
+      <GridMovies
+        Movies={Movies}
+      />
     </Contain>
   );
 };

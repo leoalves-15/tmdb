@@ -15,7 +15,7 @@ const HomeProvider = (props: { children: ReactNode }) => {
   ]);
   const [page, setPage] = useState(1);
   const [allPages, setAllPages] = useState(0);
-  const { listCurrentPage, genres } = useCurrentPage(`${page}`);
+  const { listCurrentPage, genres, filttered } = useCurrentPage(`${page}`, selectedFilters);
 
   useEffect(() => {
     setMovie(listCurrentPage?.results);
@@ -23,6 +23,12 @@ const HomeProvider = (props: { children: ReactNode }) => {
       listCurrentPage?.total_pages ? listCurrentPage?.total_pages : 0
     );
   }, [listCurrentPage]);
+
+  useEffect(() => {
+    if (selectedFilters.length > 1) {
+      setMovie(filttered?.results);
+    }
+  }, [selectedFilters, filttered]);
 
   return (
     <ContextHome.Provider

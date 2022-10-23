@@ -31,7 +31,7 @@ const FacetsFilters = () => {
       <Container>
         {genres?.map((Facet) => {
           return (
-            <>
+            <div key={Facet.id}>
               {!selectedFilters.find(({ id }) => id === Facet.id) ? (
                 <>
                   <FacetsCard
@@ -51,7 +51,7 @@ const FacetsFilters = () => {
                   {Facet.name} <CloseImage src={Close} alt="" />
                 </FacetsCardActive>
               )}
-            </>
+            </div>
           );
         })}
       </Container>
