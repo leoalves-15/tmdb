@@ -30,16 +30,19 @@ const MainBannerMovie = () => {
           }}
         />
       </ContainerBanner>
-      <Title>{currentMovie?.title} ({currentMovie?.release_date.split('-')[0]})</Title>
       <ContainerDetails>
+      <ContainerDetails>
+        <Title>
+          {currentMovie?.title} ({currentMovie?.release_date.split("-")[0]})
+        </Title>
         <Description>{currentMovie?.adult && "Adult"}</Description>
         <Description>{currentMovie?.release_date}</Description>
         <Description>
           {currentMovie?.genres?.map((genre, index) => {
             return (
               <ContainerDetails key={genre.id}>
-                {genre.name}
-                {index !== currentMovie.genres.length - 1 && ", "}
+                { genre.name}
+                {index !== currentMovie.genres.length - 1 && ","}
               </ContainerDetails>
             );
           })}
@@ -47,18 +50,21 @@ const MainBannerMovie = () => {
         <Description>{Convert(currentMovie?.runtime)}</Description>
       </ContainerDetails>
       {/* grafico */}
-      <Label>Sinopse</Label>
-      <Details>{currentMovie?.overview}</Details>
-      <ContainerCredits>
-        {currentCredits?.crew?.splice(0, 4).map((credit) => {
-          return (
-            <ContainCredits key={credit.id}>
-              <CreditName>{credit.name}</CreditName>
-              <Details>{credit.job}</Details>
-            </ContainCredits>
-          );
-        })}
-      </ContainerCredits>
+      <ContainerDetails>
+        <Label>Sinopse</Label>
+        <Details>{currentMovie?.overview}</Details>
+        <ContainerCredits>
+          {currentCredits?.crew?.splice(0, 4).map((credit) => {
+            return (
+              <ContainCredits key={credit.id}>
+                <CreditName>{credit.name}</CreditName>
+                <Details>{credit.job}</Details>
+              </ContainCredits>
+            );
+          })}
+        </ContainerCredits>
+      </ContainerDetails>
+      </ContainerDetails>
     </Container>
   );
 };

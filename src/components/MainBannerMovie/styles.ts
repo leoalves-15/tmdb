@@ -6,6 +6,8 @@ export const Container = styled.article`
   margin-bottom: 30px;
   padding: 20px;
   @media (min-width: 800px) {
+    display: flex;
+    margin-bottom: 100px;
   }
 `;
 
@@ -24,6 +26,11 @@ export const Banner = styled.img`
   top: 90px;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   border-radius: 8px;
+  @media (min-width: 800px) {
+    width: 383px;
+    height: 574px;
+    margin-bottom: -280px;
+  }
 `;
 
 export const Title = styled.h1`
@@ -37,7 +44,12 @@ export const Title = styled.h1`
   color: #ffffff;
 `;
 
-export const ContainerDetails = styled.div``;
+export const ContainerDetails = styled.div`
+  @media (min-width: 800px) {
+    display: flex;
+    flex-direction: column;
+  }
+`;
 
 export const Description = styled.p`
   font-family: "Roboto";
@@ -88,10 +100,19 @@ export const CreditName = styled.p`
 `;
 
 export const ContainerCredits = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
   margin-top: 40px;
+  @media (min-width: 800px) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+  }
 `;
 
 export const ContainCredits = styled.div``;

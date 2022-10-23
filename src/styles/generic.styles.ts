@@ -22,6 +22,9 @@ export const Title = styled.h2`
   margin-bottom:0;
   padding-left: 20px;
   color: #131313;
+  @media (min-width: 800px) {
+    padding-left: 0;
+  }
 `;
 
 export const Description = styled.p`
