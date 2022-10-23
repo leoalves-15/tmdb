@@ -13,6 +13,12 @@ export const Container = styled.div`
 
 export const Wrap = styled.div`
   margin-left: 16px;
+  @media (min-width: 800px) {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+  }
 `;
 
 export const TitleCta = styled.h1`
@@ -26,7 +32,6 @@ export const TitleCta = styled.h1`
   margin: 0;
   padding: 40px 0 40px 0;
   @media (min-width: 800px) {
-    width: 100% !important;
     font-size: 48px;
     line-height: 56px;
     width: 781px;
