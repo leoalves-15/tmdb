@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { colors } from "../../colors/colors";
 
 export const Container = styled.div`
   display: flex;
@@ -17,7 +18,7 @@ export const LabelCta = styled.p`
   font-size: 14px;
   line-height: 20px;
   margin: 0 0 8px 0;
-  color: #ffffff;
+  color: ${colors.witheText};
   @media (min-width: 800px) {
     text-align: center;
     margin: 0 0 16px 0;
@@ -31,7 +32,7 @@ export const FacetsCard = styled.div`
   padding: 6px 16px;
   height: 32px;
   margin: 0 12px 12px 0;
-  background: #ffffff;
+  background: ${colors.withe};
   border-radius: 4px;
   font-family: "Roboto";
   font-style: normal;
@@ -41,12 +42,12 @@ export const FacetsCard = styled.div`
   display: flex;
   align-items: center;
   text-align: center;
-  color: #323232;
+  color: ${colors.midiumGrey};
 `;
 
 export const FacetsCardActive = styled(FacetsCard)`
-  background: #d18000;
-  color: #ffffff;
+  background: ${colors.selectedFacets};
+  color: ${colors.withe};
 `;
 
 export const CloseImage = styled.img`

@@ -1,8 +1,9 @@
 import styled from "styled-components";
+import { colors } from "../../colors/colors";
 
 export const Container = styled.div`
   width: 100vw;
-  background: #861040;
+  background:  ${colors.primary};
   padding: 0 0 18px 0;
   margin-bottom: 32px;
   @media (min-width: 800px) {
@@ -28,7 +29,7 @@ export const TitleCta = styled.h1`
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
-  color: #ffffff;
+  color: ${colors.witheText};
   margin: 0;
   padding: 40px 0 40px 0;
   @media (min-width: 800px) {

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { colors } from "../../colors/colors";
 
 export const Container = styled.div`
   display: flex;
@@ -20,9 +21,9 @@ export const PaginationItem = styled.p`
   font-size: 16px;
   line-height: 24px;
   text-align: center;
-  color: #5c16c5;
+  color: ${colors.paginationPrimary};
 `;
 
 export const PaginationItemActive = styled(PaginationItem)`
-  color: #0094db;
+    color: ${colors.paginationPrimary};
 `;

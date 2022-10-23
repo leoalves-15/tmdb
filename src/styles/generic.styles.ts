@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { createGlobalStyle } from "styled-components";
+import { colors } from "../colors/colors";
 
 export const SubTitle = styled.h2`
   font-family: "Roboto";
@@ -7,7 +8,7 @@ export const SubTitle = styled.h2`
   font-weight: 700;
   font-size: 14px;
   line-height: 20px;
-  color: #000000;
+  color: ${colors.blackText};
   margin: 10px 0 0 0;
 `;
 
@@ -21,7 +22,7 @@ export const Title = styled.h2`
   align-items: center;
   margin-bottom:0;
   padding-left: 20px;
-  color: #131313;
+  color: ${colors.darkText};
   @media (min-width: 800px) {
     padding-left: 0;
   }
@@ -33,7 +34,7 @@ export const Description = styled.p`
   font-weight: 700;
   font-size: 12px;
   line-height: 20px;
-  color: #646464;
+  color: ${colors.ligthGreyText};
   margin: 0;
 `;
 

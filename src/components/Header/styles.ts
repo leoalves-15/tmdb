@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { colors } from "../../colors/colors";
 
 export const Container = styled.div`
   display: flex;
@@ -6,7 +7,7 @@ export const Container = styled.div`
   align-items: center;
   width: 100vw;
   height: 56px;
-  background-color: #e73980;
+  background-color: ${colors.secondary};
   @media (min-width: 800px) {
     justify-content: flex-start;
     padding: 0 130px;

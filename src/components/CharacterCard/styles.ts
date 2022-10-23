@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { colors } from "../../colors/colors";
 
 export const Container = styled.article`
   display: flex;
@@ -33,7 +34,7 @@ export const ActorName = styled.p`
   line-height: 30px;
   display: flex;
   align-items: center;
-  color: #131313;
+  color: ${colors.darkText};
   margin: 0;
 `;
 
@@ -47,6 +48,6 @@ export const CharacterName = styled.p`
   line-height: 24px;
   display: flex;
   align-items: center;
-  color: #131313;
+  color: ${colors.darkText};
   margin: 0;
 `;

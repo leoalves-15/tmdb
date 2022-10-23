@@ -1,7 +1,8 @@
 import styled from "styled-components";
+import { colors } from "../../colors/colors";
 
 export const Container = styled.article`
-  background: #861040;
+  background: ${colors.primary};
   padding: 0 0 30px 0;
   margin-bottom: 30px;
   padding: 20px;
@@ -41,7 +42,7 @@ export const Title = styled.h1`
   line-height: 38px;
   display: flex;
   align-items: center;
-  color: #ffffff;
+  color: ${colors.witheText};
 `;
 
 export const ContainerDetails = styled.div`
@@ -60,7 +61,7 @@ export const Description = styled.p`
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  color: #ffffff;
+  color: ${colors.witheText};
   margin: 0;
 `;
 
@@ -73,7 +74,7 @@ export const Details = styled.p`
   display: flex;
   align-items: center;
   letter-spacing: -0.005em;
-  color: #dddddd;
+  color: ${colors.greyText};
 `;
 
 export const Label = styled.p`
@@ -84,7 +85,7 @@ export const Label = styled.p`
   line-height: 24px;
   display: flex;
   align-items: center;
-  color: #ffffff;
+  color: ${colors.witheText};
 `;
 
 export const CreditName = styled.p`
@@ -95,7 +96,7 @@ export const CreditName = styled.p`
   line-height: 24px;
   display: flex;
   align-items: center;
-  color: #ffffff;
+  color: ${colors.witheText};
   margin: 0;
 `;
 
